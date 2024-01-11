@@ -1,0 +1,4 @@
+{
+  "tailwind-preview.cssPath": "./build/styles.css",
+  "tailwind-preview.openBrowser": true
+}

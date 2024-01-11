@@ -1,0 +1,41 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.indicator{
+    position: relative;
+}
+
+.indicator::after{
+    content: ""; /* Ajoute le contenu au pseudo-élément */
+  display: block; /* Fait du contenu un élément en bloc */
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent; /* Moitié de la largeur de la flèche */
+  border-right: 10px solid transparent; /* Moitié de la largeur de la flèche */
+  border-top: 15px solid #333; /* Taille et couleur de la flèche vers le bas */
+  position: absolute;
+  bottom: 0; /* Place la flèche au bas du conteneur h2 */
+  left: 50%; /* Centre la flèche horizontalement */
+  transform: translateX(-50%); /* Ajuste pour centrer la flèche correctement */
+  margin-bottom: 0px; /* Place la flèche contre la bordure inférieure */
+}
+
+.centered{
+  background-color: white;
+  height: 15%;
+  width: 20%;
+  position: absolute;
+  top: -5%;
+  left: -7%;
+  z-index: -10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.centered::after{
+  content: "";
+  z-index: -10;
+  @apply block bg-primary rounded-tl-xl h-[80%] w-[80%];
+}
